@@ -25,8 +25,8 @@ Authorization: Bearer {your-personal-access-token}`}</CodeBlock>
 ```
 
 :::tip
- 
-To get the Session ID, call the `/sessions/whoami` endpoint or `toSession`. 
+
+To get the Session ID, call the `/sessions/whoami` endpoint or `toSession`.
 
 :::
 
@@ -123,10 +123,9 @@ ory patch identity-config <your-project-id> \\
   </TabItem>
   <TabItem value="macos" label="Self-Hosted Ory Kratos Config" default>
 
-```shell title=path/to/kratos/config.yml
-ory patch kratos-config <your-project-id> \\
-  --replace '/session/earliest_possible_extend="24h"' \\
-  --format yaml
+```yaml title=path/to/kratos/config.yml
+session:
+  earliest_possible_extend: 24h0m0s
 ```
 
   </TabItem>
